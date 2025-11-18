@@ -13,7 +13,7 @@ st.set_page_config(layout="wide")
 st.title('DAYTON_MW Forecasting with Explainable Boosting Machine (EBM)')
 
 # --- 1. Load the Trained Model ---
-model_filename = 'ebm_model.pkl'
+model_filename = 'PWH/ebm_model.pkl'
 
 try:
     with open(model_filename, 'rb') as file:
@@ -76,3 +76,4 @@ if st.button('Predict DAYTON_MW'):
     st.metric(label="Predicted DAYTON_MW", value=f"{prediction:.2f} MW")
 
     st.info("Adjust the input features above to see how the prediction changes.")
+
