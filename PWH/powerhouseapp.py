@@ -18,7 +18,7 @@ model_filename = 'PWH/ebm_model.pkl'
 try:
     with open(model_filename, 'rb') as file:
         ebm_model = pickle.load(file)
-    st.success(f"EBM model loaded successfully from {model_filename}")
+    
 except FileNotFoundError:
     st.error(f"Error: Model file '{model_filename}' not found. Please ensure it's in the correct directory.")
     st.stop() # Stop the app if the model can't be loaded
